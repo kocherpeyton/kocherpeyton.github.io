@@ -1,4 +1,4 @@
-import aboutImage from 'figma:asset/ef8f128b8a4f33ae4d3e1e40c26ac32055674e43.png';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 export function AboutPage() {
   return (
@@ -47,8 +47,8 @@ export function AboutPage() {
 
           {/* Right Column - Image */}
           <div className="relative">
-            <img
-              src={aboutImage}
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1623080285406-5f0db64add8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwaG90b2dyYXBoZXIlMjBwb3J0cmFpdCUyMGFyaXpvbmElMjBkZXNlcnR8ZW58MXx8fHwxNzc1Njg2OTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
               alt="Photography work"
               className="w-full h-auto"
             />
