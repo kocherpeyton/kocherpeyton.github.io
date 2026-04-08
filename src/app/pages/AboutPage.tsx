@@ -14,10 +14,7 @@ export function AboutPage() {
             
             <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-300">
               <p>
-                I'm an Atlanta and California based photographer and Creative Director currently sculpting a distinctive visual language. Through my brand PMKCREATIVE, I merge technical precision with a high fashion editorial sensibility, transforming traditional portraits and graduation milestones into intentional works of art. Driven by my passion for storytelling and a keen eye for composition, my work captures the raw energy of transition, ensuring every subject feels directed, empowered, and authentically seen. </p>
-                <p>
-                I create immersive visual experiences that engage the senses and tell stories in a way that resonates with audiences. My work has been recognized for its innovative approach to visual storytelling, blending art and commerce to create compelling narratives that captivate and inspire.
-              </p>
+                I'm a photographer and Creative Director based between Atlanta and California,currently sculpting a distinctive visual language. Through my brand PMKCREATIVE, I merge technical precision with a high fashion editorial sensibility, transforming traditional portraits and graduation milestones into intentional works of art. Driven by my passion for storytelling and a keen eye for composition, my work captures the raw energy of transition, ensuring every subject feels directed, empowered, and authentically seen. </p>
               <p>
                 I have a strong background in photography, creative direction, and visual storytelling, with a focus on creating immersive experiences that engage the senses. 
                 My work includes a wide range of projects, from editorial and commercial photography to creative direction within a production company and film production, as well as fine arts photography exhibitions.
