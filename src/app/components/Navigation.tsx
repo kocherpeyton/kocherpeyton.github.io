@@ -1,4 +1,4 @@
-import { Menu, X, Instagram, Twitter } from 'lucide-react';
+import { Menu, X, Instagram, Linkedin } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router';
 
@@ -42,7 +42,7 @@ export function Navigation() {
               Contact
             </Link>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/peyton_kocher"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-gray-300 text-white"
@@ -51,13 +51,13 @@ export function Navigation() {
               <Instagram size={20} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://linkedin.com/in/peytonkocher"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-gray-300 text-white"
-              aria-label="Twitter"
+              aria-label="LinkedIn"
             >
-              <Twitter size={20} />
+              <Linkedin size={20} />
             </a>
           </div>
 
@@ -97,7 +97,7 @@ export function Navigation() {
             </Link>
             <div className="flex gap-4 mt-2">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/peyton_kocher"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-gray-300 text-white"
@@ -106,13 +106,13 @@ export function Navigation() {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://linkedin.com/in/peytonkocher"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-gray-300 text-white"
-                aria-label="Twitter"
+                aria-label="LinkedIn"
               >
-                <Twitter size={20} />
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
