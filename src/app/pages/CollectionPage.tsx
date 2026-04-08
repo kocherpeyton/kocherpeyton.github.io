@@ -9,7 +9,7 @@ const collectionsData = {
     longDescription: 'This ongoing project documents the desert landscape throughout the year, capturing the subtle shifts in color, light, and life. From the harsh summer heat to the gentle winter blooms, each season brings its own character to the arid landscape.',
     year: '2023-2026',
     images: [
-      'https://images.unsplash.com/photo-1624803972409-90a31ed3501b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNlcnQlMjBsYW5kc2NhcGUlMjBtb3VudGFpbnMlMjBhcml6b25hfGVufDF8fHx8MTc3NTY4MDA5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://res.cloudinary.com/dtfsus1am/image/upload/fl_preserve_transparency/v1775691239/TIFF_-_J9923192_1_mwvdoo.jpg',
       'https://images.unsplash.com/photo-1762572813265-e1d595bb511c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWN0dXMlMjBmaWVsZCUyMGRlc2VydCUyMHNvdXRod2VzdHxlbnwxfHx8fDE3NzU2ODAwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       'https://images.unsplash.com/photo-1653930371819-fd2b5b6d65e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcml6b25hJTIwZGVzZXJ0JTIwc3Vuc2V0JTIwZ29sZGVuJTIwaG91cnxlbnwxfHx8fDE3NzU2ODAxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080',
       'https://images.unsplash.com/photo-1639985513807-bf86c641042a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNlcnQlMjBjYWN0dXMlMjBzYWd1YXJvJTIwYXJpem9uYXxlbnwxfHx8fDE3NzU2ODAxMjV8MA&ixlib=rb-4.1.0&q=80&w=1080',
