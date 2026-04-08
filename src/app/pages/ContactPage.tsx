@@ -42,7 +42,7 @@ export function ContactPage() {
             </h1>
             
             <p className="text-lg text-gray-300">
-              I'm available for creative directing, photography, video production, and graphic design projects. Whether you're looking for personal or business collaborations, I'd love to hear about your vision. Fill out the form below and let's create something exceptional together.
+              I'm available for creative directing, photography, video production, and graphic design projects. Whether you're looking for personal or business collaborations, I'd love to hear about your vision. Fill out the form to send me a message.
             </p>
 
             {/* Direct Contact Info */}
