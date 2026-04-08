@@ -24,7 +24,7 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
-              to="/photography"
+              to="/"
               className="text-sm tracking-wide transition-colors hover:text-gray-300 text-white"
             >
               Work
@@ -75,7 +75,7 @@ export function Navigation() {
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
             <Link
-              to="/photography"
+              to="/"
               onClick={closeMenu}
               className="text-sm tracking-wide transition-colors text-left hover:text-gray-300 text-white"
             >

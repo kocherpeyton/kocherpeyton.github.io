@@ -48,41 +48,42 @@ The built files will be in the `dist/` directory.
 
 ## 🌐 Deploying to GitHub Pages
 
-### Option 1: Automatic Deployment (Recommended)
+### Automatic Deployment - It Just Works! ✨
 
-This project includes a GitHub Actions workflow that automatically deploys to GitHub Pages when you push to the main branch.
+This project is pre-configured to automatically deploy to GitHub Pages. Just follow these steps:
 
 **Setup Steps:**
 
-1. Go to your GitHub repository settings
-2. Navigate to **Settings > Pages**
-3. Under "Build and deployment":
-   - **Source**: Select "GitHub Actions"
-4. Push your code to the `main` branch
-5. The workflow will automatically build and deploy your site
+1. **Push your code to GitHub:**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+   git push -u origin main
+   ```
+
+2. **Enable GitHub Pages:**
+   - Go to your GitHub repository
+   - Navigate to **Settings → Pages**
+   - Under "Build and deployment":
+     - **Source**: Select "GitHub Actions"
+   - Click Save
+
+3. **Done!** Your site will automatically deploy when you push to main.
 
 Your site will be available at: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
 
-### Important: Configure Base URL
+The configuration automatically detects your repository name and sets up the correct URLs - no manual configuration needed!
 
-If your site is hosted at `username.github.io/repo-name/`, you need to update the base URL:
+### Using a Custom Domain (Optional)
 
-**Edit `vite.config.ts`:**
-```typescript
-export default defineConfig({
-  base: '/YOUR_REPO_NAME/',  // Change this to your repo name
-  // ... rest of config
-})
-```
+If you want to use a custom domain like `peytonkocher.com`:
 
-If you're using a custom domain (e.g., `peytonkocher.com`), keep `base: '/'`.
-
-### Option 2: Manual Deployment
-
-```bash
-npm run build
-# Then manually upload the dist/ folder to your hosting provider
-```
+1. Add your custom domain in **Settings → Pages → Custom domain**
+2. Configure your DNS settings with your domain provider
+3. The site will automatically work with your custom domain
 
 ## 🛠️ Tech Stack
 
