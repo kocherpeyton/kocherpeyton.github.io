@@ -9,20 +9,17 @@ export function AboutPage() {
           {/* Left Column - Text */}
           <div className="space-y-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl leading-tight">
-              Award-winning photographer, director & cinematographer based in Arizona.
+              My name is Peyton Kocher.
             </h1>
             
             <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-300">
               <p>
-                As a member of Arizona's vibrant creative community, I bring a different perspective to my work. Whether I'm photographing the exceptional landscapes of the Southwestern desert, directing creative projects or setting the look for independent films, I always strive to put the story first.
+                I'm an Atlanta and California based photographer and Creative Director currently sculpting a distinctive visual language. Through my brand PMKCREATIVE, I merge technical precision with a high fashion editorial sensibility, transforming traditional portraits and graduation milestones into intentional works of art. Driven by my passion for storytelling and a keen eye for composition, my work captures the raw energy of transition, ensuring every subject feels directed, empowered, and authentically seen.
+                I create immersive visual experiences that engage the senses and tell stories in a way that resonates with audiences. My work has been recognized for its innovative approach to visual storytelling, blending art and commerce to create compelling narratives that captivate and inspire.
               </p>
               
               <p>
-                With years of experience in visual storytelling and a passion for capturing authentic moments, I work with clients to create compelling imagery that resonates. My approach combines technical precision with artistic vision, resulting in work that stands out.
-              </p>
-              
-              <p>
-                Please contact me directly for projects or to inquire about purchasing my work.
+                Please contact me directly for projects in photography (portrait, editorial, or commercial) or creative direction.
               </p>
             </div>
 
@@ -48,7 +45,7 @@ export function AboutPage() {
           {/* Right Column - Image */}
           <div className="relative">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1623080285406-5f0db64add8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwaG90b2dyYXBoZXIlMjBwb3J0cmFpdCUyMGFyaXpvbmElMjBkZXNlcnR8ZW58MXx8fHwxNzc1Njg2OTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://res.cloudinary.com/dtfsus1am/image/upload/v1775689497/PEYTON_PRO_PORTRAIT_dkgsla.jpg"
               alt="Photography work"
               className="w-full h-auto"
             />
