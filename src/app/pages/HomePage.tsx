@@ -10,7 +10,7 @@ const collections = [
     description: 'The desert is a constant source of inspiration for me. Over the last three years, I\'ve photographed it almost every day, tracking the subtly changing seasons.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1624803972409-90a31ed3501b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNlcnQlMjBsYW5kc2NhcGUlMjBtb3VudGFpbnMlMjBhcml6b25hfGVufDF8fHx8MTc3NTY4MDA5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/fl_preserve_transparency/v1775691239/TIFF_-_J9923192_1_mwvdoo.jpg?_s=public-apps',
         span: 'row-span-2',
       },
       {
