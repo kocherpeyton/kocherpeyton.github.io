@@ -146,8 +146,7 @@ export function HomePage() {
       {/* Intro Section */}
       <div className="pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
         <h1 className="text-3xl md:text-4xl lg:text-5xl leading-tight max-w-3xl">
-          Award-Winning Creative Director <br/>
-          & Sensory-Driven Visual Artist<br/>
+          Creative Director & Sensory-Driven Visual Photographer <br/>
           based in Atlanta and California.<br/>
         </h1>
       </div>
