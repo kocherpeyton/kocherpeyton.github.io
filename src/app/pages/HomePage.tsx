@@ -1,7 +1,8 @@
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Link } from 'react-router';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ArrowRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 const collections = [
   {
@@ -10,7 +11,7 @@ const collections = [
     description: 'The desert is a constant source of inspiration for me. Over the last three years, I\'ve photographed it almost every day, tracking the subtly changing seasons.',
     images: [
       {
-        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/fl_preserve_transparency/v1775691239/TIFF_-_J9923192_1_mwvdoo.jpg?_s=public-apps',
+        url: 'https://images.unsplash.com/photo-1624803972409-90a31ed3501b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNlcnQlMjBsYW5kc2NhcGUlMjBtb3VudGFpbnMlMjBhcml6b25hfGVufDF8fHx8MTc3NTY4MDA5OHww&ixlib=rb-4.1.0&q=80&w=1080',
         span: 'row-span-2',
       },
       {
@@ -146,8 +147,9 @@ export function HomePage() {
       {/* Intro Section */}
       <div className="pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
         <h1 className="text-3xl md:text-4xl lg:text-5xl leading-tight max-w-3xl">
-          Creative Director & Sensory-Driven Visual Photographer <br/>
-          based in Atlanta and California.<br/>
+          Award-winning photographer,<br />
+          director & cinematographer<br />
+          based in Arizona.
         </h1>
       </div>
 
@@ -157,22 +159,24 @@ export function HomePage() {
           {collections.map((collection, collectionIndex) => (
             <div key={collection.id} className="space-y-6">
               {/* Images Grid */}
-              <div className="grid grid-cols-2 auto-rows-[250px] gap-4">
-                {collection.images.map((image, imageIndex) => (
-                  <div
-                    key={imageIndex}
-                    className={`overflow-hidden relative ${image.span} max-h-[600px] max-w-full cursor-pointer group`}
-                    onClick={() => openSlideshow(collectionIndex, imageIndex)}
-                  >
-                    <ImageWithFallback
-                      src={image.url}
-                      alt={`${collection.title} ${imageIndex + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-                  </div>
-                ))}
-              </div>
+              <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2 }}>
+                <Masonry gutter="1rem">
+                  {collection.images.map((image, imageIndex) => (
+                    <div
+                      key={imageIndex}
+                      className="overflow-hidden relative cursor-pointer group"
+                      onClick={() => openSlideshow(collectionIndex, imageIndex)}
+                    >
+                      <ImageWithFallback
+                        src={image.url}
+                        alt={`${collection.title} ${imageIndex + 1}`}
+                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+                    </div>
+                  ))}
+                </Masonry>
+              </ResponsiveMasonry>
 
               {/* Collection Info */}
               <div className="space-y-4">
