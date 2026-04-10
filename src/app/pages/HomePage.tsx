@@ -1,52 +1,51 @@
-import { Link } from 'react-router';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { Link } from 'react-router';
 import { ArrowRight, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 const collections = [
   {
-    id: 'desert-seasons',
-    title: 'Desert Seasons',
-    description: 'The desert is a constant source of inspiration for me. Over the last three years, I\'ve photographed it almost every day, tracking the subtly changing seasons.',
+    id: 'Human-Form',
+    title: 'Human Form',
+    description: 'Exploration of the human body through form',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1624803972409-90a31ed3501b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNlcnQlMjBsYW5kc2NhcGUlMjBtb3VudGFpbnMlMjBhcml6b25hfGVufDF8fHx8MTc3NTY4MDA5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/q_auto/f_auto/v1775791065/C9C05A2F-02FE-4B7E-9552-7F2AE5E995E4_k3yja0.jpg',
         span: 'row-span-2',
       },
       {
-        url: 'https://images.unsplash.com/photo-1762572813265-e1d595bb511c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWN0dXMlMjBmaWVsZCUyMGRlc2VydCUyMHNvdXRod2VzdHxlbnwxfHx8fDE3NzU2ODAwOTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/q_auto/f_auto/v1775791065/BA95C21B-F557-4248-9CD7-E6483B43683C_snqyzo.jpg',
         span: 'row-span-1',
       },
       {
-        url: 'https://images.unsplash.com/photo-1617952231944-bcfb1c7fc88a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcml6b25hJTIwZGVzZXJ0JTIwbGFuZHNjYXBlJTIwbW91bnRhaW5zJTIwcGFub3JhbWljfGVufDF8fHx8MTc3NTY4MDI2Nnww&ixlib=rb-4.1.0&q=80&w=1080',
+        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/q_auto/f_auto/v1775791064/D6722693-0E1E-4DD2-B772-631D040B8441_xxqj6a.jpg',
         span: 'row-span-2',
       },
       {
-        url: 'https://images.unsplash.com/photo-1534030664489-b03e1537dd9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNlcnQlMjBjYWN0dXMlMjBjbG9zZSUyMHVwJTIwZGV0YWlsfGVufDF8fHx8MTc3NTY4MDI2N3ww&ixlib=rb-4.1.0&q=80&w=1080',
+        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/q_auto/f_auto/v1775790950/photoshop_qbylrm.jpg',
         span: 'row-span-1',
       },
     ],
   },
   {
-    id: 'urban-nights',
-    title: 'Urban Nights',
-    description: 'Exploring the interplay of light and shadow in the city after dark. A collection documenting the energy and solitude of urban spaces at night.',
+    id: 'Acrobat',
+    title: 'Acrobat',
+    description: 'Artistic expression through movement',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1618852432867-f98fa0616cbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMHN0cmVldCUyMHBob3RvZ3JhcGh5JTIwbmlnaHQ8ZW58MXx8fHwxNzc1NjM4NzAwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/q_auto/f_auto/v1775791177/Acrobat0123_crddcq.jpg',
         span: 'row-span-1',
       },
       {
-        url: 'https://images.unsplash.com/photo-1646681268026-fbb6055f58f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXR5JTIwYXJjaGl0ZWN0dXJlJTIwbW9kZXJuJTIwYnVpbGRpbmd8ZW58MXx8fHwxNzc1NjgwMDk5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/q_auto/f_auto/v1775850983/acrobat_1_ssstla.jpg',
         span: 'row-span-2',
       },
       {
-        url: 'https://images.unsplash.com/photo-1575260526066-cac1342382ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuaWdodCUyMGNpdHklMjBsaWdodHMlMjB1cmJhbiUyMHN0cmVldHxlbnwxfHx8fDE3NzU2ODAyNjd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/q_auto/f_auto/v1775850984/Acrobat0128_1_vto7pq.jpg',
         span: 'row-span-1',
       },
       {
-        url: 'https://images.unsplash.com/photo-1612768399870-3a5f8633cf0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZW9uJTIwc2lnbnMlMjBjaXR5JTIwbmlnaHQlMjBnbG93fGVufDF8fHx8MTc3NTY4MDI2OHww&ixlib=rb-4.1.0&q=80&w=1080',
+        url: 'https://res.cloudinary.com/dtfsus1am/image/upload/q_auto/f_auto/v1775851273/Screenshot_2026-04-10_at_1.00.59_PM_g5iqqq.png',
         span: 'row-span-2',
       },
     ],
@@ -147,9 +146,9 @@ export function HomePage() {
       {/* Intro Section */}
       <div className="pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
         <h1 className="text-3xl md:text-4xl lg:text-5xl leading-tight max-w-3xl">
-          Creative Director & <br />
-          Sensory Photographer<br />
-          based in Atlanta and California.
+          Award-winning photographer,<br />
+          director & cinematographer<br />
+          based in Arizona.
         </h1>
       </div>
 
@@ -159,24 +158,22 @@ export function HomePage() {
           {collections.map((collection, collectionIndex) => (
             <div key={collection.id} className="space-y-6">
               {/* Images Grid */}
-              <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2 }}>
-                <Masonry gutter="1rem">
-                  {collection.images.map((image, imageIndex) => (
-                    <div
-                      key={imageIndex}
-                      className="overflow-hidden relative cursor-pointer group"
-                      onClick={() => openSlideshow(collectionIndex, imageIndex)}
-                    >
-                      <ImageWithFallback
-                        src={image.url}
-                        alt={`${collection.title} ${imageIndex + 1}`}
-                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-                    </div>
-                  ))}
-                </Masonry>
-              </ResponsiveMasonry>
+              <div className="grid grid-cols-2 auto-rows-[250px] gap-4">
+                {collection.images.map((image, imageIndex) => (
+                  <div
+                    key={imageIndex}
+                    className={`overflow-hidden relative ${image.span} max-h-[600px] max-w-full cursor-pointer group`}
+                    onClick={() => openSlideshow(collectionIndex, imageIndex)}
+                  >
+                    <ImageWithFallback
+                      src={image.url}
+                      alt={`${collection.title} ${imageIndex + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+                  </div>
+                ))}
+              </div>
 
               {/* Collection Info */}
               <div className="space-y-4">
